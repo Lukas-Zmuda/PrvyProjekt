@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 /**
  * Program na vypocet obvodu a obsahu kruhu
  * @author lukas
@@ -6,8 +8,12 @@
 public class U1_Kruh {
 
 	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
 		
-		double polomer = 2.45;
+		System.out.println("Program na vypocet obvodu a obsahu kruhu");
+		System.out.println("----------------------------------------");
+		System.out.println("Zadaj polomer kruhu: ");
+		double polomer = sc.nextDouble();
 		
 		double obvod = 2 * 3.14 * polomer;
 		double obsah = 3.14 * polomer * polomer;

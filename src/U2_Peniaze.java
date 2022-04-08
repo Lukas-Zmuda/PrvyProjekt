@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 /**
  * Zmenaren
  * @author lukas
@@ -7,7 +9,10 @@ public class U2_Peniaze {
 
 	public static void main(String[] args) {
 		
-		int suma = 1875;
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Zadaj sumu: ");
+		
+		int suma = sc.nextInt();
 		/*
 		 * 200 EUR: 9 ks
 		 * 100 EUR: 0 ks
