@@ -49,9 +49,9 @@ public class Operatory {
 		System.out.println(10 == 5);
 		System.out.println(10 != 5);
 		
-		int denVTyzdni = 2;
+		int denT = 2;
 		
-		boolean jeUtorok = denVTyzdni == 2;
+		boolean jeUtorok = denT == 2;
 		System.out.println(jeUtorok);
 		
 		//logicke op.
@@ -60,7 +60,7 @@ public class Operatory {
 		//NOT - !
 		
 		int hod = 22;
-		boolean jeVikend = (denVTyzdni > 5) && (denVTyzdni < 8);
+		boolean jeVikend = (denT > 5) && (denT < 8);
 		
 		/*			 AND	  OR	 NOT	
 		 * +---+---+-------+-------+----+
