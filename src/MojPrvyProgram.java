@@ -25,6 +25,10 @@ public class MojPrvyProgram {
 		
 		System.out.println("10 + 5 = " + (10 + 5));
 		
+		//Lukas
+		//LUKAS
+		//lukas
+		//LuKaS
 		
 		
 		
