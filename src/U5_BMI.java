@@ -16,7 +16,20 @@ public class U5_BMI {
 
 		// vypiseme hodnoty
 		// System.out.println("BMI: " + bmi);
-		System.out.printf("BMI: %.2f", bmi);
+		System.out.printf("BMI: %.2f\n", bmi);
+		
+		if(bmi > 40) {
+			System.out.println("Tazka obezita");
+		}else if(bmi > 30) {
+			System.out.println("Obezita");
+		}else if(bmi > 25) {
+			System.out.println("Mierna nadvaha");
+		}else if(bmi > 18.5){
+			System.out.println("Zdrava vaha");
+		}else {
+			System.out.println("Podvyziva");
+		}
+		
 
 	}
 

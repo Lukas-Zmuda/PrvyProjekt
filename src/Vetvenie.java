@@ -103,6 +103,21 @@ public class Vetvenie {
 		}
 		System.out.println("Program pokracuje dalej ...");
 
+		int hladinaVody = 24;
+		int premenna = 0;
+		//od hladiny vody 50 a viac -> premenna = 1500
+		
+		
+		if(hladinaVody > 50) {
+			premenna = 1500;
+		}else {
+			premenna = 0;
+		}
+		
+		//ternarny operator
+		premenna = (hladinaVody > 50)? 1500: 0;
+		
+		
 	}
 
 }
