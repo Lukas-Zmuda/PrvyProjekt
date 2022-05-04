@@ -19,11 +19,15 @@ public class U11_GeneratorHesiel {
 
 		// define the range, ASCII a-z = 97-122
 		int max = 122;
-		int min = 97;
+		int min = 48;
 		int range = max - min + 1;
 
 		for (int i = 0; i < dlzkaHesla; i++) {
 			int rand = (int) (Math.random() * range) + min;
+			if((rand > 57 && rand < 65) || (rand > 90 && rand < 97)) {
+				dlzkaHesla++;
+				continue;
+			}
 			char znakHesla = (char) rand;
 
 			heslo = heslo + znakHesla;
