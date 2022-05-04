@@ -1,0 +1,33 @@
+Jozko 56
+Fero 78
+Ivan 92
+Petra 89
+Martina 94
+------------------
+maxStudent = ""
+maxScore = 0
+----0. iteracia
+meno = Jozko
+skore = 56
+maxStudent = Jozko
+maxScore = 56
+----1. iteracia
+meno = Fero
+skore = 78
+maxStudent = Fero
+maxScore = 78
+----2. iteracia
+meno = Ivan
+skore = 92
+maxStudent = Ivan
+maxScore = 92
+----3. iteracia
+meno = Petra
+skore = 89
+maxStudent = Ivan
+maxScore = 92
+----4. iteracia
+meno = Martina
+skore = 94
+maxStudent = Martina
+maxScore = 94
