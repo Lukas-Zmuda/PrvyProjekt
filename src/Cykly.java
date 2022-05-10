@@ -54,6 +54,23 @@ public class Cykly {
 		
 		System.out.println("\nProgram pokracuje dalej ...");
 		
+		//1:10
+		//2:9
+		//3:8
+		//...
+		//10:1
+		
+		for(int i = 1, k = 10; i < 11 ;i++, k--) {
+			System.out.println(i + ":" + k);
+		}
+		
+		for(int i = 1; i < 11 ;i++) {
+			System.out.println(i + ":" + (11 - i));
+		}
+		
+		
+		
 	}
+	
 
 }
