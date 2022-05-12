@@ -60,6 +60,7 @@ public class Cykly {
 		//...
 		//10:1
 		
+		//FIXME toto nefunguje
 		for(int i = 1, k = 10; i < 11 ;i++, k--) {
 			System.out.println(i + ":" + k);
 		}

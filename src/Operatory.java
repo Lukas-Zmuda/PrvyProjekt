@@ -59,6 +59,7 @@ public class Operatory {
 		//OR - ||
 		//NOT - !
 		
+		//TODO task demo
 		int hod = 22;
 		boolean jeVikend = (denT > 5) && (denT < 8);
 		

@@ -22,6 +22,9 @@ public class StatickeMetody {
 		ciara(9);
 		System.out.println("Dovidenia");
 		ciara(9, "_");
+		System.out.println(scitaj(1, 12, 178, 987, 546, 158));
+		int[] c = {1, 2, 3, 4, 5};
+		System.out.println(nasob(c));
 	}
 	
 	//metoda bez navratovej hodnoty
@@ -62,6 +65,26 @@ public class StatickeMetody {
 
 	static int scitaj(int a, int b, int c) {
 		return a + b + c;
+	}
+	
+	static int scitaj(int a, int b, int c, int d) {
+		return a + b + c + d;
+	}
+	
+	static int scitaj(int... cisla) {
+		int suma = 0;
+		for(int i = 0; i < cisla.length; i++) {
+			suma += cisla[i];
+		}
+		return suma;
+	}
+	
+	static int nasob(int[] cisla) {
+		int suma = 1;
+		for(int i = 0; i < cisla.length; i++) {
+			suma *= cisla[i];
+		}
+		return suma;
 	}
 	
 	static int[] vytvorPole(int pocetPrvkov, int hodnotaPrvku) {
