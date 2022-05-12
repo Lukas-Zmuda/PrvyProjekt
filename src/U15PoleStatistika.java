@@ -1,20 +1,32 @@
+import java.util.Scanner;
 
 public class U15PoleStatistika {
 
+	static Scanner sc = new Scanner(System.in);
+	static final char mena = '$';
+		
 	public static void main(String[] args) {
 		int[] cisla = {10, -2, 456, 3, 9};
 
 		vypis(cisla);
 		System.out.println(min(cisla));
+		int m = min(cisla);
+		System.out.println(m);
 		System.out.println(max(cisla));
 		System.out.println(priemer(cisla));
 		System.out.println(pocetNadPriemer(cisla));
 		System.out.println(pocetPodPriemer(cisla));
 		int[] obr = obratene(cisla);
 		vypis(obr);
+		
+		String vstup = sc.nextLine();
+		
 	}
 	
+	
 	static void vypis(int[] pole) {
+		
+		System.out.println(mena);
 		for(int cislo: pole) {
 			System.out.print(cislo + ", ");
 		}
@@ -39,6 +51,7 @@ public class U15PoleStatistika {
 		return maximum;
 	}
 	static double priemer(int[] pole) {
+		sc.nextLine();
 		int suma = 0;
 		for(int cislo: pole) {
 			suma += cislo;
@@ -47,6 +60,7 @@ public class U15PoleStatistika {
 	}
 	static int pocetNadPriemer(int[] pole) {
 		int pocet = 0;
+		
 		for(int i = 0; i < pole.length; i++) {
 			if(pole[i] > priemer(pole)) {
 				pocet++;
@@ -75,4 +89,6 @@ public class U15PoleStatistika {
 		}
 		return obratene;
 	}
+	
+
 }
