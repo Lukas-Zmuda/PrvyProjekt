@@ -15,5 +15,35 @@ package edu.oop.zaklady;
  *
  */
 public class Ucet {
+	
+	String cislo;
+	double zostatok;
+	
+	void info() {
+		System.out.println("Ucet cislo: " + cislo);
+		System.out.println("Zostatok na ucte: " + zostatok);
+	}
+	
+	void vklad(double suma) {
+		if(suma > 0) {
+			zostatok += suma;
+			System.out.println("Vklad " + suma + " na ucet. Zostatok: " + zostatok);
+		}else {
+			System.out.println("Nepovolena operacia! Vklad: " + suma);
+		}
+	}
+	
+	void vyber(double suma) {
+		if(suma > 0) {
+			if(suma < zostatok) {
+				zostatok -= suma;
+				System.out.println("Vyber " + suma + " z uctu. Zostatok: " + zostatok);
+			}else {
+				System.out.println("Nepovolena operacia - nedostatok prostriedkov! Vyber: " + suma);
+			}
+		}else {
+			System.out.println("Nepovolena operacia! Vyber: " + suma);
+		}
+	}
 
 }

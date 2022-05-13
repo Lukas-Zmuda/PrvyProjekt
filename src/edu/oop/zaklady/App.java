@@ -19,6 +19,15 @@ public class App {
 		System.out.println(ob.obsah());
 		System.out.println(ob.obvod());
 		System.out.println(ob.jeStvorec());
+		
+		Ucet u = new Ucet();
+		u.cislo = "SK115600000000123456789";
+		u.zostatok = 1200;
+		u.info();
+		
+		u.vklad(-300);
+		u.vyber(500);
+		u.info();
 	}
 
 }
