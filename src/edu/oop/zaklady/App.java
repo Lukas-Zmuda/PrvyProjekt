@@ -13,7 +13,12 @@ public class App {
 		
 		os.pozdrav();
 		
-		
+		Obdlznik ob = new Obdlznik();
+		ob.d = 12;
+		ob.s = 10;
+		System.out.println(ob.obsah());
+		System.out.println(ob.obvod());
+		System.out.println(ob.jeStvorec());
 	}
 
 }

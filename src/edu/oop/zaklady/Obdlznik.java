@@ -14,5 +14,24 @@ package edu.oop.zaklady;
  */
 
 public class Obdlznik {
+	
+	double d;
+	double s;
+	
+	void info() {
+		System.out.println("Obdlznik d = " + d + " cm, s = " + s + " cm.");
+	}
+	
+	double obvod() {
+		return 2 * (d + s);
+	}
+	
+	double obsah() {
+		return d * s;
+	}
+	
+	boolean jeStvorec() {
+		return d == s;
+	}
 
 }
