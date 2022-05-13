@@ -3,11 +3,14 @@ public class U16Strings {
 
 	public static void main(String[] args) {
 		
-		String email = "info@elct.sk";
+		String email = "info@posta.elct.sk";
 		
 		String schranka = schranka(email);//info
+		System.out.println(schranka);
 		String server = server(email);//elct.sk
+		System.out.println(server);
 		boolean validna = valid(email);	
+		System.out.println(validna);
 	}
 
 	/**
@@ -21,19 +24,28 @@ public class U16Strings {
 	 * @return true - validny email
 	 */
 	static boolean valid(String email) {
-		
-		return false;
+		int pocetBodiek = 0;
+		int pocetZavinacov = 0;
+		for(int i = 0; i < server(email).length(); i++) {
+			if(server(email).charAt(i) == '.') {
+				pocetBodiek++;
+			}
+		}
+		for(int i = 0; i < email.length(); i++) {
+			if(email.charAt(i) == '@') {
+				pocetZavinacov++;
+			}
+		}
+		return (pocetBodiek > 0) && (pocetZavinacov == 1);			
 	}
 
 	static String server(String email) {
-		
-		return null;
+		int poziciaZavinac = email.indexOf('@');
+		return email.substring(poziciaZavinac + 1);
 	}
 
 	static String schranka(String email) {
-		
-		
-		return null;
+		return email.substring(0, email.indexOf('@'));
 	}
 
 }
