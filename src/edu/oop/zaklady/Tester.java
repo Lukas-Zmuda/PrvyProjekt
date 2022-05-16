@@ -10,6 +10,8 @@ public class Tester {
 		//inicializacia objektu
 		o = new Osoba();
 
+		o.pozdrav(true);
+		
 		Osoba o2 = new Osoba();
 		
 		o.meno = "Fero";
@@ -37,6 +39,14 @@ public class Tester {
 		
 		System.out.println(o.pohlavieSlovom());
 		
+		Osoba o4 = new Osoba(null, null, 35, 'm');
+		o4.pozdrav(true);
+		o4.meno = null;
+		o4.pozdrav(true);
+		
+		Osoba o5 = new Osoba("Aladar", "Miazga");
+		
+		o5.pozdrav(true);
 
 	}
 
