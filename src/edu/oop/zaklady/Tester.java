@@ -48,6 +48,11 @@ public class Tester {
 		
 		o5.pozdrav(true);
 
+		Employee emp = new Employee(2, "Peter", "Pan", 1200);
+		
+		System.out.println(emp.toString());
+		emp.raiseSalary(10);
+		System.out.println(emp.toString());
 	}
 
 }
