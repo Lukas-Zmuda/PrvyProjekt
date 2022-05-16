@@ -50,8 +50,4 @@ public class Employee {
 	public String toString() {
 		return "Employee[id = " + getId() + ", name = " + getName() + ", salary = " + getSalary() + "]";
 	}
-	
-	
-	
-	
 }
