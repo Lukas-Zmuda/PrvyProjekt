@@ -1,6 +1,6 @@
 package edu.oop.dedicnost;
 
-public class App {
+public class App{
 
 	public static void main(String[] args) {
 
@@ -37,8 +37,11 @@ public class App {
 		utvary[2] = new Stvorec(0, 0, "zlaty",99);
 		
 		for(Utvar uuuu: utvary) {
-			uuuu.info();
+			System.out.println(uuuu);
 		}
+		
+	
+		System.out.println(k);
 		
 		
 	}

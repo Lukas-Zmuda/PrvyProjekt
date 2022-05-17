@@ -33,4 +33,15 @@ public class Obdlznik extends Utvar {
 	public void setSirka(int sirka) {
 		this.sirka = sirka;
 	}
+
+
+
+	@Override
+	public String toString() {
+		
+		return "Obdlznik na [" + this.getX() + ", " + this.getY() + "]d=" + 
+				this.getDlzka() + ", s=" + this.getSirka() + ", farba=" + this.getFarba();
+	}
+	
+	
 }

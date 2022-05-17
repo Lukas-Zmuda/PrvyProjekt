@@ -22,6 +22,13 @@ public class Stvorec extends Utvar{
 		System.out.println("Stvorec na [" + this.getX() + ", " + this.getY() + "]a=" +  
 							this.getA() + "farba=" + this.getFarba());
 	}
+
+	@Override
+	public String toString() {
+		
+		return "Stvorec na [" + this.getX() + ", " + this.getY() + "]a=" +  
+				this.getA() + "farba=" + this.getFarba();
+	}
 	
 	
 	

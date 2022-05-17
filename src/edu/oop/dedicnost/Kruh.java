@@ -21,4 +21,12 @@ public class Kruh extends Utvar {
 	public void setPolomer(double polomer) {
 		this.polomer = polomer;
 	}
+
+	@Override
+	public String toString() {
+		return "Kruh so stredom[" + getX() + ", " + getY() + "] r = " + this.getPolomer()
+		 + ", farba = " + this.getFarba();
+	}
+	
+	
 }
