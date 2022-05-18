@@ -42,6 +42,20 @@ public class Obdlznik extends Utvar {
 		return "Obdlznik na [" + this.getX() + ", " + this.getY() + "]d=" + 
 				this.getDlzka() + ", s=" + this.getSirka() + ", farba=" + this.getFarba();
 	}
+
+
+
+	@Override
+	public double obvod() {
+		return 2 * (this.dlzka + this.sirka);
+	}
+
+
+
+	@Override
+	public double obsah() {
+		return this.dlzka * this.sirka;
+	}
 	
 	
 }

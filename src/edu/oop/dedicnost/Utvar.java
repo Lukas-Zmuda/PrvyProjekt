@@ -1,6 +1,6 @@
 package edu.oop.dedicnost;
 
-public class Utvar {
+public abstract class Utvar {
 	
 	private int x, y;
 	private String farba;
@@ -34,6 +34,7 @@ public class Utvar {
 		this.farba = farba;
 	}
 	
-	
+	public abstract double obvod();
+	public abstract double obsah();	
 
 }

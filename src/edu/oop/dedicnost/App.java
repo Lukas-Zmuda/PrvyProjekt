@@ -4,6 +4,9 @@ public class App{
 
 	public static void main(String[] args) {
 
+		//Utvar utv  = new Utvar(1, 2, "cierny");
+		//utv.info();
+		
 		Kruh k = new Kruh(1, 2, 10, "cerveny");
 		//k.info();
 

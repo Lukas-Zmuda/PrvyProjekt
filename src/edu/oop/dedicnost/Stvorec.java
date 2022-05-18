@@ -1,6 +1,6 @@
 package edu.oop.dedicnost;
 
-public class Stvorec extends Utvar{
+public final class Stvorec extends Utvar implements MenitelnyObjekt{
 
 	private int a;
 	
@@ -28,6 +28,28 @@ public class Stvorec extends Utvar{
 		
 		return "Stvorec na [" + this.getX() + ", " + this.getY() + "]a=" +  
 				this.getA() + "farba=" + this.getFarba();
+	}
+
+	@Override
+	public double obvod() {
+		return 4 * a;
+	}
+
+	@Override
+	public double obsah() {
+		return a * a;
+	}
+
+	@Override
+	public void zvacsi(int x) {
+		this.setA(this.getA() + x);
+		
+	}
+
+	@Override
+	public void zmensi(int x) {
+		this.setA(this.getA() - x);
+		
 	}
 	
 	
