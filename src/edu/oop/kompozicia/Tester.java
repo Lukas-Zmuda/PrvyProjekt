@@ -6,16 +6,18 @@ public class Tester {
 		
 		Autor lp = new Autor("Ludmila", "Podjavorinska", "lp@proza.sk");
 		
-		Kniha zvz = new Kniha("Z vesny zivota", 10000, lp);
+		Autor[] autors = {
+				new Autor("Ludmila", "Podjavorinska", "lp@proza.sk"),
+				new Autor("Lubomir", "Feldek", "lf@proza.sk"),
+				new Autor("Jan", "Smrek", "js@proza.sk")
+		};
 		
-		System.out.println(zvz);
-		System.out.println(lp);
+		Kniha zbierka = new Kniha("Zbierka basni", 40000, autors);
 		
-		Kniha perinbaba = new Kniha("Perinbaba", 20000, new Autor("Lubomir", "Feldek", "lf@proza.sk"));
+		System.out.println(zbierka.pocetAutorov());
+		System.out.println(zbierka.autoriKnihy());
 		
-		System.out.println(perinbaba.getAutor());
-
-		System.out.println(perinbaba.getAutor().getMeno());
+		
 	}
 
 }

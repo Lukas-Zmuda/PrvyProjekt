@@ -4,13 +4,13 @@ public class Kniha {
 	
 	private String nazov;
 	private int naklad;
-	private Autor autor;
+	private Autor[] autori;
 	
-	public Kniha(String nazov, int naklad, Autor autor) {
+	public Kniha(String nazov, int naklad, Autor[] autori) {
 		super();
 		this.nazov = nazov;
 		this.naklad = naklad;
-		this.autor = autor;
+		this.autori = autori;
 	}
 
 	public String getNazov() {
@@ -29,17 +29,24 @@ public class Kniha {
 		this.naklad = naklad;
 	}
 
-	public Autor getAutor() {
-		return autor;
+	public Autor[] getAutori() {
+		return autori;
 	}
 
-	public void setAutor(Autor autor) {
-		this.autor = autor;
+	public void setAutori(Autor[] autori) {
+		this.autori = autori;
 	}
 
-	@Override
-	public String toString() {
-		return "Kniha [nazov=" + nazov + ", naklad=" + naklad + ", autor=" + autor + "]";
+	public int pocetAutorov() {
+		return autori.length;
+	}
+	
+	public String autoriKnihy() {
+		String str = "";
+		for(Autor a: this.autori) {
+			str += a + "\n";
+		}
+		return str;
 	}
 	
 	
