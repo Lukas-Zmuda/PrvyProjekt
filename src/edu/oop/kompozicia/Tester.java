@@ -17,6 +17,11 @@ public class Tester {
 		System.out.println(zbierka.pocetAutorov());
 		System.out.println(zbierka.autoriKnihy());
 		
+		Autor a = Autor.slovensky("Ludovit", "Stur", "ls@elct.sk");
+		System.out.println(a);
+		Autor b = Autor.cesky("Honza", "Navratil", "hz@sdfsd.sk");
+		System.out.println(b);
+		
 		
 	}
 
