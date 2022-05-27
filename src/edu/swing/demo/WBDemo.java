@@ -25,6 +25,8 @@ import javax.swing.border.TitledBorder;
 import java.awt.Color;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import javax.swing.JTextArea;
+import javax.swing.JScrollPane;
 
 public class WBDemo extends JFrame {
 
@@ -39,6 +41,8 @@ public class WBDemo extends JFrame {
 	private JCheckBox chckbxStav;
 	private JPanel pT1;
 	private JPanel pT2;
+	private JButton btnNastavenia;
+	private JTextArea taVypis;
 
 	/**
 	 * Launch the application.
@@ -80,6 +84,7 @@ public class WBDemo extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		btnStlac = new JButton("Stlac ma");
+		
 		btnStlac.setIcon(new ImageIcon(WBDemo.class.getResource("/edu/swing/res/icons8_natural_user_interface_2_32px.png")));
 		btnStlac.setBounds(672, 11, 121, 43);
 		contentPane.add(btnStlac);		
@@ -151,6 +156,27 @@ public class WBDemo extends JFrame {
 		pT2.setBackground(new Color(0, 102, 255));
 		pT2.setBounds(72, 22, 52, 54);
 		panel.add(pT2);
+		
+		btnNastavenia = new JButton("");
+		btnNastavenia.setIcon(new ImageIcon(WBDemo.class.getResource("/edu/swing/res/icons8_settings_32px.png")));
+		btnNastavenia.setBounds(728, 119, 65, 61);
+		contentPane.add(btnNastavenia);
+		
+		JScrollPane scrollPane = new JScrollPane();
+		scrollPane.setBounds(24, 271, 220, 172);
+		contentPane.add(scrollPane);
+		
+		taVypis = new JTextArea();
+		scrollPane.setViewportView(taVypis);
+		taVypis.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		
+		JPanel panel_1 = new JPanel();
+		panel_1.setBounds(324, 288, 65, 61);
+		contentPane.add(panel_1);
+		
+		JLabel lblNewLabel_3 = new JLabel("");
+		lblNewLabel_3.setIcon(new ImageIcon(WBDemo.class.getResource("/edu/swing/res/icons8_hamburger_32px.png")));
+		panel_1.add(lblNewLabel_3);
 	}
 
 	private void createEvents() {
@@ -195,7 +221,8 @@ public class WBDemo extends JFrame {
 					meno += "Vitajte pane.";
 				}
 				//JOptionPane.showMessageDialog(rootPane, meno);
-				tfMeno.setText(meno);
+				//tfMeno.setText(meno);
+				taVypis.setText(meno);
 			}
 		});
 		
