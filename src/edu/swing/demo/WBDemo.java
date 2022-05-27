@@ -20,6 +20,11 @@ import javax.swing.ButtonGroup;
 import javax.swing.JComboBox;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.ImageIcon;
+import javax.swing.JCheckBox;
+import javax.swing.border.TitledBorder;
+import java.awt.Color;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 public class WBDemo extends JFrame {
 
@@ -31,6 +36,9 @@ public class WBDemo extends JFrame {
 	private final ButtonGroup buttonGroup = new ButtonGroup();
 	private JButton btnVymaz;
 	private JComboBox cbTitul;
+	private JCheckBox chckbxStav;
+	private JPanel pT1;
+	private JPanel pT2;
 
 	/**
 	 * Launch the application.
@@ -117,16 +125,72 @@ public class WBDemo extends JFrame {
 		JLabel lblNewLabel_1 = new JLabel("Titul:");
 		lblNewLabel_1.setBounds(10, 70, 46, 14);
 		contentPane.add(lblNewLabel_1);
+		
+		chckbxStav = new JCheckBox("ženatý/vydatá");
+		chckbxStav.setBounds(80, 107, 97, 23);
+		contentPane.add(chckbxStav);
+		
+		JLabel lblNewLabel_2 = new JLabel("Stav:");
+		lblNewLabel_2.setBounds(10, 111, 46, 14);
+		contentPane.add(lblNewLabel_2);
+		
+		JPanel panel = new JPanel();
+		panel.setBorder(new TitledBorder(null, "Tla\u010Didl\u00E1", TitledBorder.LEADING, TitledBorder.TOP, null, null));
+		panel.setBounds(355, 65, 261, 172);
+		contentPane.add(panel);
+		panel.setLayout(null);
+		
+		pT1 = new JPanel();
+		
+		pT1.setBackground(new Color(0, 204, 0));
+		pT1.setBounds(10, 22, 52, 54);
+		panel.add(pT1);
+		
+		pT2 = new JPanel();
+		
+		pT2.setBackground(new Color(0, 102, 255));
+		pT2.setBounds(72, 22, 52, 54);
+		panel.add(pT2);
 	}
 
 	private void createEvents() {
+		
+		pT2.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseEntered(MouseEvent e) {
+				pT2.setBackground(new Color(0, 204, 255));
+			}
+			@Override
+			public void mouseExited(MouseEvent e) {
+				pT2.setBackground(new Color(0, 102, 255));
+			}
+		});
+		
+		pT1.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseEntered(MouseEvent e) {
+				pT1.setBackground(new Color(0, 255, 51));
+			}
+			@Override
+			public void mouseExited(MouseEvent e) {
+				pT1.setBackground(new Color(0, 204, 0));
+			}
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				JOptionPane.showMessageDialog(rootPane, "Klikol si na zelene tlacidlo!");
+			}
+		});
 		
 		btnStlac.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String meno = tfMeno.getText();
 				meno = "Ahoj " + cbTitul.getSelectedItem() + " " + meno + ". ";
 				if(rdbtnZena.isSelected()) {
-					meno += "Vitajte slecna.";
+					if(chckbxStav.isSelected()) {
+						meno += "Vitajte pani.";
+					}else {
+						meno += "Vitajte slecna.";						
+					}
 				}else {
 					meno += "Vitajte pane.";
 				}
@@ -140,6 +204,7 @@ public class WBDemo extends JFrame {
 				tfMeno.setText("");
 				cbTitul.setSelectedIndex(1);
 				rdbtnZena.setSelected(true);
+				chckbxStav.setSelected(false);
 			}
 		});
 		
